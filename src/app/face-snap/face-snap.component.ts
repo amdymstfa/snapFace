@@ -14,6 +14,8 @@ export class FaceSnapComponent implements OnInit {
   description!: string;
   createdAt!: Date;
   snap!: number;
+  textButton! : string
+  userHasSnap! : boolean;
 
   //initialize properties 
   ngOnInit(): void{
@@ -22,10 +24,28 @@ export class FaceSnapComponent implements OnInit {
     this.description = 'My best moments with her';
     this.createdAt = new Date();
     this.snap = 0;
+    this.textButton = 'Snap!';
+    this.userHasSnap = false;
   }
 
   // methodes for litening events
   onSnap(): void {
-    this.snap++;
+    if (this.userHasSnap){
+      this.snapp();
+    }else {
+      this.unsnap();
+    }
+  }
+
+  snapp() : void {
+      this.snap--;
+      this.textButton = 'Snap!';
+      this.userHasSnap = false;
+  }
+
+  unsnap(): void {
+      this.textButton = 'Ooups!';
+      this.snap++;
+      this.userHasSnap = true;
   }
 }
