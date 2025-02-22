@@ -16,7 +16,7 @@ export class FaceSnapComponent implements OnInit {
 
   //initialize properties 
   ngOnInit(): void{
-    this.title = 'Remenber time' ;
+    this.title = 'Remenber time and me' ;
     this.description = 'My best moments with her';
     this.createdAt = new Date();
     this.snap = 4000;
