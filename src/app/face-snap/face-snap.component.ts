@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {faceSnap} from '../models/face-snap'
 import { DatePipe, LowerCasePipe, NgClass, NgStyle, UpperCasePipe } from '@angular/common';
+import { FaceSnapsService } from '../services/face-snaps.service';
 
 @Component({
   selector: 'app-face-snap',
@@ -16,6 +17,7 @@ import { DatePipe, LowerCasePipe, NgClass, NgStyle, UpperCasePipe } from '@angul
   // standalone: true,
 })
 export class FaceSnapComponent implements OnInit {
+  constructor(private faceSnapService: FaceSnapsService){}
   @Input() FaceSnap!: faceSnap;
   // declare propreties by promess
   // title!: string;
@@ -47,7 +49,8 @@ export class FaceSnapComponent implements OnInit {
   }
 
   snapp() : void {
-      this.FaceSnap.addSnapp();
+      // this.FaceSnap.addSnapp();
+      this.faceSnapService.snapFaceSnapbyId(this.FaceSnap.id);
       this.textButton = 'Snap!';
       this.userHasSnap = false;
   }
