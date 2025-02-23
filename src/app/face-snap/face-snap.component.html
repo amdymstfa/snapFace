@@ -1,4 +1,4 @@
-<div class="face-snap-container">
+<div class="face-snap-container" ngClass="{ snapped: userHasSnap }">
     <!-- Première carte -->
     <div class="face-snap-card">
       <h1>{{FaceSnap.title}}</h1>
@@ -11,7 +11,10 @@
       <p>{{FaceSnap.description}}</p>
       <p>Create at : {{FaceSnap.createdAt}}</p>
       <p><button (click)="onSnap()">{{textButton}}</button> <span [ngStyle]="{ color: 'rgb(0, ' + FaceSnap.snap + ', 0)' }">🤌{{FaceSnap.snap}}</span></p>
-    </div>
+</div>
+
+
+
 
   
    
