@@ -1,0 +1,41 @@
+// Variables pour les couleurs
+$snap-bg-color: rgba(lightgreen, 0.4);
+$snap-text-color: darkgreen;
+$primary-button: #3498db;
+$hover-button: #2980b9;
+$card-bg: white;
+$text-primary: #2c3e50;
+$text-secondary: #34495e;
+$background: #f5f6fa;
+
+header {
+    width: 100%;
+    background-color: $card-bg;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  
+    h1 {
+      color: $text-primary;
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: $primary-button;
+      }
+    }
+  
+    // Media query pour la responsive
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
