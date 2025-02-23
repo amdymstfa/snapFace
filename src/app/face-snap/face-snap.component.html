@@ -8,7 +8,7 @@
       }
       <img [src]="FaceSnap.url" [alt]="FaceSnap.title">
       <p>{{FaceSnap.description | lowercase }}</p>
-      <p>Create at : {{FaceSnap.createdAt}}</p>
+      <p>Create at : {{FaceSnap.createdAt | date: 'longDate' }}</p>
       <p><button (click)="onSnap()">{{textButton}}</button> <span [ngStyle]="{ color: 'rgb(0, ' + FaceSnap.snap + ', 0)' }">🤌{{FaceSnap.snap}}</span></p>
 </div>
 
