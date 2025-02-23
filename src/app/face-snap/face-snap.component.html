@@ -1,5 +1,10 @@
 <div class="face-snap-card">
 <h1>{{FaceSnap.title}}</h1>
+@if (FaceSnap.location){
+    <p>At {{FaceSnap.location}}</p>
+}@else {
+    <p>Not location for now</p>
+}
 <img [src]="FaceSnap.url" [alt]="FaceSnap.title">
 <p>{{FaceSnap.description}}</p>
 <p>Create at : {{FaceSnap.createdAt}}</p>

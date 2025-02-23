@@ -1,3 +1,7 @@
-<app-face-snap [FaceSnap]="mySnap"></app-face-snap>
+<!-- <app-face-snap [FaceSnap]="mySnap"></app-face-snap>
 <app-face-snap [FaceSnap]="mySnapp"></app-face-snap>
-<app-face-snap [FaceSnap]="mySnappp"></app-face-snap>
+<app-face-snap [FaceSnap]="mySnappp"></app-face-snap> -->
+
+@for (facesnap of snaps; track facesnap.title){
+    <app-face-snap [FaceSnap]="facesnap"/>
+}
