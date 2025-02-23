@@ -3,9 +3,18 @@ export class faceSnap {
         public title : string,
         public url : string,
         public description : string,
-        public createAt : Date,
+        public createdAt : Date,
         public snap : number,
     ){
 
+    }
+
+    addSnapp() : void {
+        this.snap--;
+        
+    }
+
+    removeSnap(): void {
+        this.snap++;
     }
 }
