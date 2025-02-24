@@ -50,14 +50,14 @@ export class FaceSnapComponent implements OnInit {
 
   snapp() : void {
       // this.FaceSnap.addSnapp();
-      this.faceSnapService.snapFaceSnapbyId(this.FaceSnap.id);
+      this.faceSnapService.snapFaceSnapbyId(this.FaceSnap.id, 'Snap');
       this.textButton = 'Snap!';
-      this.userHasSnap = false;
+      this.userHasSnap = true;
   }
 
   unsnap(): void {
-      this.textButton = 'Ooups!';
-      this.FaceSnap.removeSnap();
-      this.userHasSnap = true;
+    this.faceSnapService.snapFaceSnapbyId(this.FaceSnap.id, 'Ooups');
+    this.textButton = 'Ooups!';
+    this.userHasSnap = false;
   }
 }
